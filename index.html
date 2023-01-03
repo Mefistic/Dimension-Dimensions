@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="output.css">
+  <title>Dimension Dimensions</title>
+</head>
+
+<body class="bg-black text-slate-200 text-sm text-center xl:text-base">
+  <div onclick="maxall()" class="w-36 m-auto pt-2 text-[#444] cursor-pointer">[ Max All (M) ]</div>
+  <div class="grid lg:grid-cols-2 m-4 gap-8">
+    <div class="
+        child:flex
+        child:justify-between
+        child:px-4
+        child:py-2
+        even:child:bg-red-500
+        even:child:bg-opacity-10
+        child:child:w-full
+        first:child:child:text-left
+        last:child:child:text-right
+        only:child:child:text-center
+      ">
+      <div>
+        <div class="child:text-red-400">
+          You have <span eval-text="LSN.sci(player.antimatter)"></span> Antimatter
+        </div>
+      </div>
+      <div>
+        <div>Anti D1</div>
+        <div eval-text="LSN.sci(player.antimatter1amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`antimatter1`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`antimatter1`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`antimatter1`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`antimatter1`)">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div>Anti D2</div>
+        <div eval-text="LSN.sci(player.antimatter2amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`antimatter2`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`antimatter2`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`antimatter2`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`antimatter2`)">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div>Anti D3</div>
+        <div eval-text="LSN.sci(player.antimatter3amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`antimatter3`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`antimatter3`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`antimatter3`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`antimatter3`)">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div>Anti D4</div>
+        <div eval-text="LSN.sci(player.antimatter4amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`antimatter4`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`antimatter4`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`antimatter4`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`antimatter4`)">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div>Anti D5</div>
+        <div eval-text="LSN.sci(player.antimatter5amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`antimatter5`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`antimatter5`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`antimatter5`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`antimatter5`)">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div>Anti D6</div>
+        <div eval-text="LSN.sci(player.antimatter6amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`antimatter6`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`antimatter6`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`antimatter6`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`antimatter6`)">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div>Anti D7</div>
+        <div eval-text="LSN.sci(player.antimatter7amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`antimatter7`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`antimatter7`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`antimatter7`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`antimatter7`)">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div>Anti D8</div>
+        <div eval-text="LSN.sci(player.antimatter8amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`antimatter8`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`antimatter8`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`antimatter8`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`antimatter8`)">
+          </span></span>
+        </div>
+      </div>
+    </div>
+    <div class="
+        child:flex
+        child:justify-between
+        child:px-4
+        child:py-2
+        even:child:bg-pink-500
+        even:child:bg-opacity-10
+        child:child:w-full
+        first:child:child:text-left
+        last:child:child:text-right
+        only:child:child:text-center
+      ">
+      <div>
+        <div class="child:text-pink-500">
+          You have
+          <span eval-text="LSN.sci(player.speedcrystals)"></span>
+          Speed Crystals, boosting Anti Dims by
+          <span eval-text="`×` + LSN.sci(getspeedcrystaleff())"></span>
+        </div>
+      </div>
+      <div>
+        <div>Speed D1</div>
+        <div eval-text="LSN.sci(player.speed1amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`speed1`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`speed1`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`speed1`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`speed1`)">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div>Speed D2</div>
+        <div eval-text="LSN.sci(player.speed2amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`speed2`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`speed2`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`speed2`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`speed2`)">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div>Speed D3</div>
+        <div eval-text="LSN.sci(player.speed3amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`speed3`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`speed3`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`speed3`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`speed3`)">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div>Speed D4</div>
+        <div eval-text="LSN.sci(player.speed4amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`speed4`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`speed4`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`speed4`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`speed4`)">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div>Speed D5</div>
+        <div eval-text="LSN.sci(player.speed5amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`speed5`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`speed5`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`speed5`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`speed5`)">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div>Speed D6</div>
+        <div eval-text="LSN.sci(player.speed6amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`speed6`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`speed6`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`speed6`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`speed6`)">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div>Speed D7</div>
+        <div eval-text="LSN.sci(player.speed7amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`speed7`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`speed7`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`speed7`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`speed7`)">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div>Speed D8</div>
+        <div eval-text="LSN.sci(player.speed8amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`speed8`))"></div>
+        <div>
+          <span eval-text="LSN.sci(getcost(`speed8`))"
+            eval-class="player.antimatter.gte(LSN.sci(getcost(`speed8`))) ? `text-green-400 cursor-pointer` : `text-red-400`"
+            onclick="buydim(`speed8`)">
+          </span></span>
+        </div>
+      </div>
+    </div>
+    <div class="
+        child:flex
+        child:justify-between
+        child:px-4
+        child:py-2
+        even:child:bg-orange-500
+        even:child:bg-opacity-10
+        child:child:w-full
+        first:child:child:text-left
+        last:child:child:text-right
+        only:child:child:text-center
+      ">
+      <div>
+        <div>
+          <span onclick="boost()" eval-text="getboosttext()"
+            eval-class="player.antimatter8bought.gte(getboostreq()) ? `text-green-400 cursor-pointer` : `text-red-400`">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div class="child:text-orange-400">
+          You have
+          <span eval-text="LSN.sci(player.boosts,0)"></span>
+          Boosts
+        </div>
+      </div>
+      <div>
+        <div class="child:text-orange-400">
+          You have
+          <span eval-text="LSN.sci(player.boostpower)"></span>
+          Boost Power, boosting Anti Dims by
+          <span eval-text="`×` + LSN.sci(getboostpowereff())"></span>
+        </div>
+      </div>
+      <div>
+        <div>Booster D1</div>
+        <div eval-text="LSN.sci(player.booster1amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`booster1`))"></div>
+      </div>
+      <div>
+        <div>Booster D2</div>
+        <div eval-text="LSN.sci(player.booster2amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`booster2`))"></div>
+      </div>
+      <div>
+        <div>Booster D3</div>
+        <div eval-text="LSN.sci(player.booster3amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`booster3`))"></div>
+      </div>
+      <div>
+        <div>Booster D4</div>
+        <div eval-text="LSN.sci(player.booster4amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`booster4`))"></div>
+      </div>
+      <div>
+        <div>Booster D5</div>
+        <div eval-text="LSN.sci(player.booster5amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`booster5`))"></div>
+      </div>
+      <div>
+        <div>Booster D6</div>
+        <div eval-text="LSN.sci(player.booster6amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`booster6`))"></div>
+      </div>
+      <div>
+        <div>Booster D7</div>
+        <div eval-text="LSN.sci(player.booster7amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`booster7`))"></div>
+      </div>
+      <div>
+        <div>Booster D8</div>
+        <div eval-text="LSN.sci(player.booster8amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`booster8`))"></div>
+      </div>
+    </div>
+    <div class="
+        child:flex
+        child:justify-between
+        child:px-4
+        child:py-2
+        even:child:bg-fuchsia-500
+        even:child:bg-opacity-10
+        child:child:w-full
+        first:child:child:text-left
+        last:child:child:text-right
+        only:child:child:text-center
+      ">
+      <div>
+        <div>
+          <span onclick="galaxy()" eval-text="getgalaxytext()"
+            eval-class="player.speed8bought.gte(getgalaxyreq()) ? `text-green-400 cursor-pointer` : `text-red-400`">
+          </span>
+        </div>
+      </div>
+      <div>
+        <div class="child:text-fuchsia-400">
+          You have
+          <span eval-text="LSN.sci(player.galaxies,0)"></span>
+          Galaxies
+        </div>
+      </div>
+      <div>
+        <div class="child:text-fuchsia-400">
+          You have
+          <span eval-text="LSN.sci(player.galacticpower)"></span>
+          Galactic Power, boosting Per 10 Multiplier in Speed Dims by
+          <span eval-text="`+` + LSN.sci(getgalacticpowereff(),3)"></span>
+        </div>
+      </div>
+      <div>
+        <div>Galactic D1</div>
+        <div eval-text="LSN.sci(player.galactic1amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`galactic1`))"></div>
+      </div>
+      <div>
+        <div>Galactic D2</div>
+        <div eval-text="LSN.sci(player.galactic2amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`galactic2`))"></div>
+      </div>
+      <div>
+        <div>Galactic D3</div>
+        <div eval-text="LSN.sci(player.galactic3amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`galactic3`))"></div>
+      </div>
+      <div>
+        <div>Galactic D4</div>
+        <div eval-text="LSN.sci(player.galactic4amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`galactic4`))"></div>
+      </div>
+      <div>
+        <div>Galactic D5</div>
+        <div eval-text="LSN.sci(player.galactic5amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`galactic5`))"></div>
+      </div>
+      <div>
+        <div>Galactic D6</div>
+        <div eval-text="LSN.sci(player.galactic6amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`galactic6`))"></div>
+      </div>
+      <div>
+        <div>Galactic D7</div>
+        <div eval-text="LSN.sci(player.galactic7amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`galactic7`))"></div>
+      </div>
+      <div>
+        <div>Galactic D8</div>
+        <div eval-text="LSN.sci(player.galactic8amount)"></div>
+        <div eval-text="`×` + LSN.sci(getmult(`galactic8`))"></div>
+      </div>
+    </div>
+  </div>
+  <span eval-class="player.antimatter.gte(Number.MAX_VALUE) ? `visible` : `invisible`">
+    YOU HAVE REACHED THE CURRENT ENDGAME, MORE CONTENT SOON.
+  </span>
+</body>
+
+<script src="LSnum.js"></script>
+<script src="variables.js"></script>
+<script src="core.js"></script>
+<script src="evaljs.js"></script>
+
+</html>
